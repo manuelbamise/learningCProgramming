@@ -1,17 +1,21 @@
+#include "stdbool.h"
 #include "stdio.h"
 
 int main() {
 
-  int age = 400;
-  int year = 2025;
-  int amount = 5000;
+  char name[] = "manuel bamise";
+  char letter = 'g';
 
-  printf("you are %d years old \n", age);
-  printf("The year is %d \n", year);
-  printf("The battery costs %d naira \n", amount);
+  printf("hello %s \n", name);
+  printf("the letter after f is, %c \n", letter);
 
-  float height = 5.11;
-  printf("your height is %.4f", height);
+  bool isActive = true;
 
+  if (!isActive) {
+    printf("the user is currently active\n");
+  } else {
+    printf("sorry, the user is offline \n");
+  }
+  printf("%d", isActive);
   return 0;
 }
