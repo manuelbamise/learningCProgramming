@@ -1,5 +1,6 @@
 #include "stdbool.h"
 #include "stdio.h"
+#include "string.h"
 
 int main() {
 
@@ -20,11 +21,12 @@ int main() {
   getchar();
   printf("Enter your name: ");
   fgets(name, sizeof(name), stdin);
+  name[strlen(name) - 1] = '\0';
 
+  printf("string: %s \n", name);
   printf("int: %d \n", age);
   printf("float: %f \n", gpa);
   printf("char: %c \n", grade);
-  printf("string: %s \n", name);
 
   return 0;
 }
