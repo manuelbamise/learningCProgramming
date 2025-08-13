@@ -4,29 +4,24 @@
 
 int main() {
 
-  int age;
-  float gpa;
-  char grade;
-  char name[30];
+  char product[45];
+  float price;
+  int productNumber;
+  float totalAmount;
 
-  printf("Enter your age: ");
-  scanf("%d", &age);
+  printf("What do you want to purchase: ");
+  fgets(product, strlen(product), stdin);
 
-  printf("Enter your GPA: ");
-  scanf("%f", &gpa);
+  printf("How many?: ");
+  scanf("%d", &productNumber);
 
-  printf("Enter your grade: ");
-  scanf(" %c", &grade);
+  printf("how much is per product?: ");
+  scanf("%f", &price);
 
-  getchar();
-  printf("Enter your name: ");
-  fgets(name, sizeof(name), stdin);
-  name[strlen(name) - 1] = '\0';
+  totalAmount = price * productNumber;
 
-  printf("string: %s \n", name);
-  printf("int: %d \n", age);
-  printf("float: %f \n", gpa);
-  printf("char: %c \n", grade);
+  printf("You purchased %d %s's and the total amount is %f", productNumber,
+         product, totalAmount);
 
   return 0;
 }
