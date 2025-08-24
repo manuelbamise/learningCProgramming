@@ -1,13 +1,13 @@
 #include <math.h>
 #include <stdio.h>
-#define AMOUNTOFCHAR 3
+#define AMOUNTOFCHAR 9
 // #define OUT 0
 
 int main() {
   int nums[AMOUNTOFCHAR];
   int input;
 
-  for (int i = 0; i <= AMOUNTOFCHAR; ++i) {
+  for (int i = 0; i < AMOUNTOFCHAR; ++i) {
 
     printf("Put in a new number\n");
     scanf("%d", &input);
@@ -15,7 +15,8 @@ int main() {
     nums[i] = input;
   }
 
-  for (int i = 0; i <= AMOUNTOFCHAR; ++i) {
+  printf("the result\n");
+  for (int i = 0; i < AMOUNTOFCHAR; ++i) {
     printf("%d \n", nums[i]);
   }
 
