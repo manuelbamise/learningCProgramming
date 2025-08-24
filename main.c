@@ -1,14 +1,22 @@
 #include <math.h>
 #include <stdio.h>
+#define AMOUNTOFCHAR 3
+// #define OUT 0
 
 int main() {
-  /* program to print the farenheit table
-    and the celcius equivalent*/
+  int nums[AMOUNTOFCHAR];
+  int input;
 
-  int fahr;
+  for (int i = 0; i <= AMOUNTOFCHAR; ++i) {
 
-  for (fahr = 300; fahr >= 0; fahr -= 20) {
-    printf("%d %.1f \n", fahr, (5.0 / 9.0) * (fahr - 32));
+    printf("Put in a new number\n");
+    scanf("%d", &input);
+
+    nums[i] = input;
+  }
+
+  for (int i = 0; i <= AMOUNTOFCHAR; ++i) {
+    printf("%d \n", nums[i]);
   }
 
   return 0;
